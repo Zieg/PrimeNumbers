@@ -5,10 +5,12 @@ using System.Text;
 using System.Collections;
 using System.Collections.ObjectModel;
 
+using collectionAlias = System.Collections.ObjectModel.Collection<PrimeNumbers.GraphHelpers.Node>;
+
 namespace PrimeNumbers.GraphHelpers
 {
 
-    public class NodeList : Collection<Node>
+    public class NodeList : collectionAlias
     {
         #region Constructors
 
@@ -46,7 +48,7 @@ namespace PrimeNumbers.GraphHelpers
 
         #region Internal methods
 
-        internal void Add(Node node)
+        new internal void Add(Node node)
         {
             base.Add(node);
         }
