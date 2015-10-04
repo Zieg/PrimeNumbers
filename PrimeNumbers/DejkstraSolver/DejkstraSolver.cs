@@ -30,19 +30,21 @@ namespace PrimeNumbers.DejkstraSolver
 
             SolverStep(graph);
 
-            foreach (Node node in graph.Nodes)
-            {
-                System.IO.File.AppendAllText(@"D:\int.txt", "---" + node.Id + " -> " + node.Counter + "\n");
-            }
+            //Debug code
+            //foreach (Node node in graph.Nodes)
+            //{
+            //    System.IO.File.AppendAllText(@"D:\int.txt", "---" + node.Id + " -> " + node.Counter + "\n");
+            //}
 
             foreach (Node node in graph.Nodes)
             {
                 if (node.Id == finishNodeId)
                 {
-                    foreach (Node nodeItem in node.Path)
-                    {
-                        Console.WriteLine("-- " + nodeItem.Id);
-                    }
+                    //Debug code
+                    //foreach (Node nodeItem in node.Path)
+                    //{
+                    //    Console.WriteLine("-- " + nodeItem.Id);
+                    //}
                     return node.Counter;
                 }
             }

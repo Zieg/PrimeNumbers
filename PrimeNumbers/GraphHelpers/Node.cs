@@ -21,6 +21,63 @@ namespace PrimeNumbers.GraphHelpers
 
         #endregion
 
+        #region Fields
+
+        /// <summary>
+        /// Id of the node
+        /// </summary>
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        /// <summary>
+        /// A list of neighbor nodes
+        /// </summary>
+        internal NodeList Neighbors
+        {
+            get { return neighbors; }
+            set { neighbors = value; }
+        }
+
+        /// <summary>
+        /// A counter to mark node and check if it was already visited
+        /// </summary>
+        public void IncreaseCounter()
+        {
+            counter++;
+        }
+
+        /// <summary>
+        /// A field that represents the counter
+        /// </summary>
+        public int Counter
+        {
+            get { return counter; }
+            set { counter = value; }
+        }
+
+        /// <summary>
+        /// Status of the Node
+        /// </summary>
+        public bool IsActive
+        {
+            get { return isActive; }
+            set { isActive = value; }
+        }
+
+        /// <summary>
+        /// Shows 
+        /// </summary>
+        public NodeList Path
+        {
+            get { return path; }
+            set { path = value; }
+        }
+
+        #endregion
+
         #region Constructors
 
         /// <summary>
@@ -44,59 +101,5 @@ namespace PrimeNumbers.GraphHelpers
         }
 
         #endregion
-
-        #region Fields
-
-        /// <summary>
-        /// Id of the node
-        /// </summary>
-        public int Id
-        {
-            get { return id; }
-
-            set { id = value; }
-        }
-
-        /// <summary>
-        /// A list of neighbor nodes
-        /// </summary>
-        internal NodeList Neighbors
-        {
-            get { return neighbors; }
-
-            set { neighbors = value; }
-        }
-
-        #endregion
-
-        /// <summary>
-        /// A counter to mark node and check if it was already visited
-        /// </summary>
-        public void IncreaseCounter()
-        {
-            counter++;
-        }
-
-        /// <summary>
-        /// A field that represents the counter
-        /// </summary>
-        public int Counter
-        {
-            get { return counter; }
-            set { counter = value; }
-        }
-
-        public bool IsActive
-        {
-            get { return isActive; }
-            set { isActive = value; }
-        }
-
-        public NodeList Path
-        {
-            get { return path; }
-
-            set { path = value; }
-        }
     }
 }
