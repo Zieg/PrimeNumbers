@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrimeNumbers.GraphHelpers
+{
+    /// <summary>
+    /// A class that represents a node
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class Node<T>
+    {
+        #region Private members
+
+        private T data;
+        private NodeList<T> neighbors = null;
+
+        #endregion
+
+        #region Constructors
+
+        public Node()
+        { 
+
+        }
+
+        public Node(T data) : this(data, null)
+        {
+
+        }
+
+        public Node(T data, NodeList<T> neighbors)
+        {
+            this.data = data;
+            this.neighbors = neighbors;
+        }
+
+        #endregion
+
+        #region Fields
+
+        /// <summary>
+        /// Id of the node
+        /// </summary>
+        public T Id
+        {
+            get { return data; }
+
+            set { data = value; }
+        }
+
+        /// <summary>
+        /// A list of neighbor nodes
+        /// </summary>
+        internal NodeList<T> Neighbors
+        {
+            get { return neighbors; }
+
+            set { neighbors = value; }
+        }
+
+        #endregion
+
+    }
+}
